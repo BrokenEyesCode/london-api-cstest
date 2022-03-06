@@ -2,7 +2,7 @@
   "name": "london-api-cstest",
   "version": "1.0.0",
   "description": "API to return users living in or 50 miles of London",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "node ./src/app.js",
     "test": "jest --coverage",
