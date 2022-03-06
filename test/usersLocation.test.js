@@ -60,7 +60,7 @@ describe("Test suit for user location", () => {
         expect(getMilesFromMeters(1600)).toBe(1);
     })
     test('Should return distance from start to end point', () => {
-        user = getMockedUsers()[0];
+        let user = getMockedUsers()[0];
         expect (getDistFromCoOrds(user)).toBe(8742859)
     })
     test('Should return all users listed as london or located within 50 miles', async () => {

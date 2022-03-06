@@ -1,5 +1,4 @@
 "use strict";
-const fs = require('fs');
 const geolib = require('geolib');
 const {getData} = require('./httpsRequest')
 
@@ -40,10 +39,13 @@ const getUsersWithinXMiles = (users, dist) => {
 
 const getAllLondonUsers = async() => {
     let london_city_users = await getCityUsers().then(cityData => {
+        console.log('by city:', cityData.length)
         return cityData
     })
-    let london_loc_users = await getAllUsers().then(allUsers => {
-        return getUsersWithinXMiles(allUsers, 50)
+    let london_loc_users = await getAllUsers().then(allUsers => {        
+        let filteredUsers = getUsersWithinXMiles(allUsers, 50)
+        console.log('By Location: ',filteredUsers.length)
+        return filteredUsers
     })    
     return london_loc_users.concat(london_city_users)
 }

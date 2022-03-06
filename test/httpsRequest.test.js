@@ -1,5 +1,4 @@
 const {getData} = require('../src/httpsRequest');
-const https = require('https');
 jest.mock('https');
 
 const httpsMock = require("https");

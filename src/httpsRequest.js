@@ -3,7 +3,6 @@ const https = require('https');
 const getData = (url, path) => {
     return new Promise((resolve, reject) => {
         https.get(url + path, (res) => {
-            //res.setEncoding('utf8');
             let rawData = '';
 
             res.on('data', (chunk) => {
@@ -15,7 +14,9 @@ const getData = (url, path) => {
             });
             res.on('end', () => {
                 try {
-                    console.log('data', rawData)
+
+
+                    
                     resolve(JSON.parse(rawData));
                 } catch (e) {
                     reject(e.message);

@@ -4,8 +4,9 @@
   "description": "API to return users living in or 50 miles of London",
   "main": "index.js",
   "scripts": {
+    "start": "node ./src/app.js",
     "test": "jest --coverage",
-    "lint": "eslint ./src/usersLocation.js"
+    "lint": "eslint ./src/*.js ./test/*.js"
   },
   "repository": {
     "type": "git",
@@ -18,10 +19,12 @@
   },
   "homepage": "https://github.com/Status420/london-api-cstest#readme",
   "dependencies": {
+    "express": "^4.17.3",
     "geolib": "^3.3.3"
   },
   "devDependencies": {
     "eslint": "^8.10.0",
+    "eslint-plugin-jest": "^26.1.1",
     "jest": "^27.5.1"
   }
 }
