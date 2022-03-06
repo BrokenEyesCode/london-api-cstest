@@ -9,6 +9,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+notes.txt
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -138,6 +139,7 @@ _TeamCity*
 !.axoCover/settings.json
 
 # Visual Studio code coverage results
+coverage
 *.coverage
 *.coveragexml
 

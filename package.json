@@ -1,0 +1,27 @@
+{
+  "name": "london-api-cstest",
+  "version": "1.0.0",
+  "description": "API to return users living in or 50 miles of London",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "lint": "eslint ./src/usersLocation.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Status420/london-api-cstest.git"
+  },
+  "author": "Leona Atkins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Status420/london-api-cstest/issues"
+  },
+  "homepage": "https://github.com/Status420/london-api-cstest#readme",
+  "dependencies": {
+    "geolib": "^3.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.10.0",
+    "jest": "^27.5.1"
+  }
+}
