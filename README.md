@@ -1,10 +1,10 @@
 # london-api-cstest
-An API to return a list of users within 50 mile of London based on a given API.
+An API to return a list of users who are listed as living in London or within 50 mile of the centre of London based their coordinates.
 
-This App uses the lightweight `Express` Node JS RESTful API
-[Find out more about express here](https://expressjs.com)
-For Ditance Calculations I used the GeoLib library
-[Find our more about GeoLib at their GitHub page](https://github.com/manuelbieh/geolib#readme)
+This Api uses the lightweight `Express` Node JS RESTful API framework
+[Find out more about express here](https://expressjs.com).
+For Distance Calculations I used the GeoLib library
+[Find our more about GeoLib at their GitHub page](https://github.com/manuelbieh/geolib#readme).
 
 ## Install
 * Clone the repository.
@@ -26,6 +26,7 @@ To run the tests use
 ```
     mpm test
 ```
+
 ## Lint
 To ensure code quality, ESLint is used and ran against the application.
 ```
