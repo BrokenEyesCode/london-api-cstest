@@ -3,7 +3,7 @@ const geolib = require('geolib');
 const {getData} = require('./httpsRequest')
 
 const LONDON_COORDS = {latitude: 51.510244, longitude: -0.12571990}
-const MILES_KM_CONVERSION = 1.6
+const KM_MILES_CONVERSION = 0.621371
 const API_URL = 'https://bpdts-test-app.herokuapp.com/'
 
 /**
@@ -28,7 +28,8 @@ const getCityUsers = async() => {
  * @returns {Number}, miles converted from meters input.
  */
 const getMilesFromMeters = (meters) => {
-    return meters / 1000 / MILES_KM_CONVERSION
+    console.log('meters: ', meters)
+    return (meters / 1000) * KM_MILES_CONVERSION
 }
 
 /**

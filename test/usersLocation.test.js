@@ -12,12 +12,12 @@ jest.mock('../src/httpsRequest.js')
 
 // Mocked data.
 const getMockedUsers = () => {
-    let rawdata = fs.readFileSync('./test/userData.fixture.json');
-    return JSON.parse(rawdata);   
+    let rawData = fs.readFileSync('./test/userData.fixture.json');
+    return JSON.parse(rawData);   
 }
 const getMockedCityUsers = () => {
-    let rawdata = fs.readFileSync('./test/cityFilteredUsers.fixture.json');
-    return JSON.parse(rawdata);   
+    let rawData = fs.readFileSync('./test/cityFilteredUsers.fixture.json');
+    return JSON.parse(rawData);
 }
 
 describe("Test suit for user location", () => {
@@ -52,12 +52,20 @@ describe("Test suit for user location", () => {
         expect(within_radius(londonUser,50)).toBeTruthy()        
         expect(within_radius(notLondonUser,50)).toBeFalsy()
     });
+
+    test('Should return true for a location within 50 miles of London.', () => {
+        let location = {
+            latitude: 51.885,
+            longitude: 0.85
+        } // 49 miles.
+        expect(within_radius(location,50)).toBeTruthy()        
+    })
     test('Should return a filtered set of users', () =>{
         let data = getMockedUsers()
-        expect(getUsersWithinXMiles(data, 50).length).toBe(1);        
+        expect(getUsersWithinXMiles(data, 50).length).toBe(1);
     });
     test('Should convert meters to miles', () => {
-        expect(getMilesFromMeters(1600)).toBe(1);
+        expect(Math.round(getMilesFromMeters(1609))).toBe(1);
     })
     test('Should return distance from start to end point', () => {
         let user = getMockedUsers()[0];
