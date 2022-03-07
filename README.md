@@ -5,10 +5,11 @@ This App uses the lightweight `Express` Node JS RESTful API
 [Find out more about express here](https://expressjs.com)
 For Ditance Calculations I used the GeoLib library
 [Find our more about GeoLib at their GitHub page](https://github.com/manuelbieh/geolib#readme)
+
 ## Install
 * Clone the repository.
 * install node and npm, [you can get node from the node website](https://nodejs.org/en/) 
-* Install depenacies with `npm install`
+* Install dependencies with `npm install`
 
 ## Usage
 To start the application use
