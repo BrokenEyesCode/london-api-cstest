@@ -28,7 +28,6 @@ const getCityUsers = async() => {
  * @returns {Number}, miles converted from meters input.
  */
 const getMilesFromMeters = (meters) => {
-    console.log('meters: ', meters)
     return (meters / 1000) * KM_MILES_CONVERSION
 }
 
